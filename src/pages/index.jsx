@@ -1,18 +1,21 @@
 import { render } from '@czechitas/render';
 import '../global.css';
 import './index.css';
+import { Flight } from "../Flight";
 
-document.querySelector('#root').innerHTML = render(
-  <div className="container">
-    <header>
-      <div className="logo"></div>
-      <h1>Webová aplikace</h1>
-    </header>
-    <main>
-      <p>Startovací šablona pro webovou aplikaci v JavaScriptu s JSX. Vytvořeno pomocí <a href="https://www.npmjs.com/package/create-kodim-app">create-kodim-app</a>.</p>
-    </main>
-    <footer>
-      <p>Czechitas, Digitální akademie: Web</p>
-    </footer>
+document.querySelector("#root").innerHTML = render(
+  <div>
+    <Flight
+      cityFrom="Praha"
+      cityTo="Londýn"
+      timeFrom="3. srpna 2022, 13:30"
+      timeTo="3. srpna 2022, 14:00"
+    />
+    <Flight
+      cityFrom="Vídeň"
+      cityTo="Nice"
+      timeFrom="13. května 2025, 12:30"
+      timeTo="17. května 2025, 14:00"
+    />
   </div>
 );
